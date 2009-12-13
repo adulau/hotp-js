@@ -34,7 +34,6 @@
 
 */
 
-
 function hotp(key, counter, format) {
 
     function hotp_hexkeytobytestream(s) {
