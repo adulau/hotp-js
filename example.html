@@ -1,0 +1,33 @@
+<html>
+<head>
+<script type="text/javascript" src="http://crypto-js.googlecode.com/files/2.0.0-crypto-sha1.js"></script>
+<script type="text/javascript" src="http://crypto-js.googlecode.com/files/2.0.0-hmac-min.js"></script>
+<script type="text/javascript" src="http://www.foo.be/hotp/hotp/hotp.js"></script>
+<title>HOTP Sample Test Page in Javascript</title>
+</head>
+<body>
+
+<h1>HOTP Sample Test Page in Javascript</h1>
+
+<script>
+
+//document.write(hotp("505FAB31EDDE28AAC73F3531771758A2C5CF9730","4008","hex40"));
+//document.write(" ");
+//document.write(hotp("505FAB31EDDE28AAC73F3531771758A2C5CF9730","4008","dec6"));
+
+document.write("test vector from RFC 4226 for token key : 0x3132333435363738393031323334353637383930<br/>");
+for (var i=0; i<10; i++) {
+        document.write("count: "+i); 
+        document.write(" hex40 (used in ootp): ");
+        document.write(hotp("3132333435363738393031323334353637383930",i,"hex40"));
+        document.write(" HOTP value: ");
+        document.write(hotp("3132333435363738393031323334353637383930",i,"dec6"));
+        document.write("<br />");
+}
+</script>
+<br />
+<br />
+<a href="http://www.gitorious.org/hotp-js">demo of hotp-js - source code available at http://www.gitorious.org/hotp-js</a>
+
+</body>
+</html>
