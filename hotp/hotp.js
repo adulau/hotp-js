@@ -92,6 +92,10 @@ function hotp(key, counter, format) {
         return hmacBytes.substring(0, 10);
     } else if (format == "dec6") {
         return truncatedvalue(Crypto.util.hexToBytes(hmacBytes), 6);
+    } else if (format == "dec7") {
+        return truncatedvalue(Crypto.util.hexToBytes(hmacBytes), 7);
+    } else if (format == "dec8") {
+        return truncatedvalue(Crypto.util.hexToBytes(hmacBytes), 8);
     }
     else {
         return "unknown format";

@@ -20,8 +20,10 @@ for (var i=0; i<10; i++) {
         document.write("count: "+i); 
         document.write(" hex40 (used in ootp): ");
         document.write(hotp("3132333435363738393031323334353637383930",i,"hex40"));
-        document.write(" HOTP value: ");
+        document.write(" HOTP value: (dec6)");
         document.write(hotp("3132333435363738393031323334353637383930",i,"dec6"));
+        document.write(" HOTP value: (dec8)");
+        document.write(hotp("3132333435363738393031323334353637383930",i,"dec8")); 
         document.write("<br />");
 }
 </script>
