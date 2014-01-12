@@ -1,7 +1,7 @@
 hotp-js - A JavaScript HOTP implementation
 =================================================
 
-A JavaScript HOTP implementation (HMAC-Based One-Time Password Algorithm) as described in [RFC4226](http://tools.ietf.org/html/rfc4226). The library is relying on [crypto-js](http://code.google.com/p/crypto-js/) for the javascript HMAC-SHA1 implementation.
+A JavaScript HOTP implementation (HMAC-Based One-Time Password Algorithm) as described in [RFC4226](http://tools.ietf.org/html/rfc4226). The library uses on [crypto-js](http://code.google.com/p/crypto-js/) for the javascript HMAC-SHA1 implementation.
 
 How to use it
 -------------
