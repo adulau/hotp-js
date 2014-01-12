@@ -1,12 +1,12 @@
-hotp-js - A simple JavaScript HOTP implementation
+hotp-js - A JavaScript HOTP implementation
 =================================================
 
-A simple JavaScript HOTP implementation (HMAC-Based One-Time Password Algorithm) as described in [RFC4226](http://tools.ietf.org/html/rfc4226). The library is relying on [crypto-js](http://code.google.com/p/crypto-js/) for the javascript HMAC-SHA1 implementation.
+A JavaScript HOTP implementation (HMAC-Based One-Time Password Algorithm) as described in [RFC4226](http://tools.ietf.org/html/rfc4226). The library is relying on [crypto-js](http://code.google.com/p/crypto-js/) for the javascript HMAC-SHA1 implementation.
 
 How to use it
 -------------
 
-Load the htop.js, set the private key of the token and the count step.
+Load the htop.js file, set the private key of the token and the count step.
 
 ```javascript
 otp = hotp("3132333435363738393031323334353637383930","4","dec6");
@@ -19,10 +19,15 @@ The following output formats are supported:
 * dec7  - truncated 7 bytes decimal representation
 * dec8  - truncated 8 bytes decimal representation
 
+Example
+-------
+
+Check [this web page](http://www.foo.be/hotp/example.html) that will run in your browser htop-js with the RFC4226 test values.
+
 Security recommendations
 ------------------------
 
-* Don't forget to protect the key of the token along with the count value (e.g. local encryption of the software token).
+* If you implement software tokens, don't forget to protect the key of the token along with the count value (e.g. local encryption of the software token).
 * Code is experimental.
 
 License
